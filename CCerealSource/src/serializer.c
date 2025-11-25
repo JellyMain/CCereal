@@ -137,7 +137,7 @@ void *DeserializeObject(cJSON *jsonObject, StructScheme *scheme)
 }
 
 
-char *SerializeToJson(void *data, StructScheme *scheme)
+char *CCereal_Serialize(void *data, StructScheme *scheme)
 {
 	cJSON *json = SerializeObject(data, scheme);
 	char *jsonString = cJSON_Print(json);
@@ -146,7 +146,7 @@ char *SerializeToJson(void *data, StructScheme *scheme)
 }
 
 
-void *DeserializeFromJson(char *jsonString, StructScheme *scheme)
+void *CCereal_Deserialize(char *jsonString, StructScheme *scheme)
 {
 	cJSON *jsonObject = cJSON_Parse(jsonString);
 	if (!jsonObject)

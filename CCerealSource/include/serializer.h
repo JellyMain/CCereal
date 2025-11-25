@@ -31,6 +31,6 @@ typedef struct StructScheme
 } StructScheme;
 
 
-char *SerializeToJson(void *data, StructScheme *scheme);
+char *CCereal_Serialize(void *data, StructScheme *scheme);
 
-void *DeserializeFromJson(char *jsonString, StructScheme *scheme);
+void *CCereal_Deserialize(char *jsonString, StructScheme *scheme);
